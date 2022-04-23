@@ -4,6 +4,7 @@ type ErrorController struct {
 	BaseController
 }
 
+// this is the error 404
 func (c *ErrorController) Error404() {
 	c.Data["content"] = "page not found"
 	c.TplName = "404.tpl"
