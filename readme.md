@@ -1,3 +1,6 @@
+## Project Run 
+put this url in browser: http://localhost:8080/index otherwise builtin error will occur
+
 ### Go lang BeeGo fraework basic and useful things 
 
 ### Key reference 

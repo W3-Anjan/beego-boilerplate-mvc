@@ -1,6 +1,9 @@
 package controllers
 
-import "time"
+import (
+	beego "github.com/beego/beego/v2/server/web"
+	"time"
+)
 
 type MainController struct {
 	BaseController
@@ -20,6 +23,15 @@ func (c *MainController) NestPrepare() {
 }
 
 func (c *MainController) Get() {
+
+	// Flash message
+	flash := beego.NewFlash()
+	flash.Notice("Settings saved!")
+	flash.Store(&c.Controller)
+
+	get_flash := beego.ReadFromRequest(&c.Controller)
+	defer println("Flash message:" + get_flash.Data["notice"])
+
 	c.Data["Website"] = "beego.me"
 	c.Data["Email"] = "astaxie@gmail.com"
 	c.Data["t"] = time.Now()
@@ -29,5 +41,6 @@ func (c *MainController) Get() {
 			"c": 4,
 		},
 	}
+
 	c.TplName = "index.tpl"
 }
