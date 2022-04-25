@@ -11,7 +11,7 @@
 ### Controller define Error
 1. https://github.com/beego/beedoc/blob/master/en-US/mvc/controller/errors.md#controller-define-error
 
-## ne eq
+### ne eq
 text/template doesn’t provide operators, but it provides functions such as and, or, not, eq or ne.
 The html/template package provides us with a few classes to help do comparison. These are
 - ``eq`` - Returns the boolean truth of ``arg1 == arg2``
@@ -20,3 +20,9 @@ The html/template package provides us with a few classes to help do comparison. 
 - ``le`` - Returns the boolean truth of ``arg1 <= arg2``
 - ``gt`` - Returns the boolean truth of ``arg1 > arg2``
 - ``ge`` - Returns the boolean truth of ``arg1 >= arg2``
+
+### Filter
+Beego supports custom filter middlewares. E.g.: user authentication and force redirection
+
+### Flash
+Flash messages are temporary messages between two logic blocks. All flash messages will be cleared after the very next logic block. They are normally used to send notes and error messages.
