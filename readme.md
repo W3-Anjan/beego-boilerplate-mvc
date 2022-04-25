@@ -11,3 +11,12 @@
 ### Controller define Error
 1. https://github.com/beego/beedoc/blob/master/en-US/mvc/controller/errors.md#controller-define-error
 
+## ne eq
+text/template doesn’t provide operators, but it provides functions such as and, or, not, eq or ne.
+The html/template package provides us with a few classes to help do comparison. These are
+- ``eq`` - Returns the boolean truth of ``arg1 == arg2``
+- ``ne`` - Returns the boolean truth of ``arg1 != arg2``
+- ``lt`` - Returns the boolean truth of ``arg1 < arg2``
+- ``le`` - Returns the boolean truth of ``arg1 <= arg2``
+- ``gt`` - Returns the boolean truth of ``arg1 > arg2``
+- ``ge`` - Returns the boolean truth of ``arg1 >= arg2``
